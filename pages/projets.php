@@ -157,9 +157,25 @@ if (
 
     <style>
 
-        #dark-mode-toggle {
-            display: none;
-        }
+       .icon-moon { display: inline; }
+    .icon-sun  { display: none; }
+    html:has(#dark-mode-toggle:checked) body {
+      --rose-deep:#f06292;--rose-accent:#ff80ab;--rose-soft:#f48fb1;
+      --rose-blush:#3d1a2e;--rose-pale:#2a0d1e;--dark:#fce4ec;
+      --text-main:#f8d7e3;--text-light:#ce93b6;--text-muted:#8b5a72;
+      --bg-main:#1a0a12;--bg-section:#200e18;--bg-card:#2d1a24;
+      --border:rgba(240,98,146,0.2);
+      --shadow:0 4px 30px rgba(0,0,0,0.4);--shadow-lg:0 20px 60px rgba(0,0,0,0.5);
+      background:#1a0a12;color:#f8d7e3;
+    }
+    html:has(#dark-mode-toggle:checked) .navbar { background:rgba(26,10,18,0.94); }
+    html:has(#dark-mode-toggle:checked) .footer  { background:#0d0509; }
+    html:has(#dark-mode-toggle:checked) .icon-moon { display:none; }
+    html:has(#dark-mode-toggle:checked) .icon-sun  { display:inline; }
+    .erreur { color: #dc3545; font-size: 0.85rem; margin-top: 5px; }
+    .succes { background: #d4edda; color: #155724; padding: 15px; margin: 20px; border-radius: 8px; }
+    .succes-projet { background: #d4edda; color: #155724; padding: 15px; margin: 20px; border-radius: 8px; }
+    .recap { background: #e8f4f8; padding: 15px; margin-top: 10px; border-radius: 5px; }
 
         .erreur {
             color: #dc3545;
